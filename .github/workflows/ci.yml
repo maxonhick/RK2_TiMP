@@ -41,7 +41,7 @@ jobs:
       - name: Generate coverage
         run: |
           cd build
-          lcov -c -d . --include "*/strategies/*.h" --include "*/tests/*.cpp" --output-file coverage.info
+          lcov -c -d . --include "*/tests/*.cpp" --output-file coverage.info
           lcov --remove coverage.info "*usr/include*" "*gtest*" --output-file coverage_filtered.info
 
       - name: Coveralls
