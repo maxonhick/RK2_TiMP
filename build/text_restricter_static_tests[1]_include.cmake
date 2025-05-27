@@ -1,5 +1,0 @@
-if(EXISTS "/home/vm/maxonhick/workspace/projects/RK2/build/text_restricter_static_tests[1]_tests.cmake")
-  include("/home/vm/maxonhick/workspace/projects/RK2/build/text_restricter_static_tests[1]_tests.cmake")
-else()
-  add_test(text_restricter_static_tests_NOT_BUILT text_restricter_static_tests_NOT_BUILT)
-endif()

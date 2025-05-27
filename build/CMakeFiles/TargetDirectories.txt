@@ -1,6 +1,0 @@
-/home/vm/maxonhick/workspace/projects/RK2/build/CMakeFiles/text_restricter_static_tests.dir
-/home/vm/maxonhick/workspace/projects/RK2/build/CMakeFiles/text_restricter_tests.dir
-/home/vm/maxonhick/workspace/projects/RK2/build/CMakeFiles/package.dir
-/home/vm/maxonhick/workspace/projects/RK2/build/CMakeFiles/package_source.dir
-/home/vm/maxonhick/workspace/projects/RK2/build/CMakeFiles/edit_cache.dir
-/home/vm/maxonhick/workspace/projects/RK2/build/CMakeFiles/rebuild_cache.dir

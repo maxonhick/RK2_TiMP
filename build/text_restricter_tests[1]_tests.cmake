@@ -1,7 +1,0 @@
-add_test([=[TextRestricterTest.NoRestriction]=]  /home/vm/maxonhick/workspace/projects/RK2/build/text_restricter_tests [==[--gtest_filter=TextRestricterTest.NoRestriction]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[TextRestricterTest.NoRestriction]=]  PROPERTIES WORKING_DIRECTORY /home/vm/maxonhick/workspace/projects/RK2/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-add_test([=[TextRestricterTest.CurseRestriction]=]  /home/vm/maxonhick/workspace/projects/RK2/build/text_restricter_tests [==[--gtest_filter=TextRestricterTest.CurseRestriction]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[TextRestricterTest.CurseRestriction]=]  PROPERTIES WORKING_DIRECTORY /home/vm/maxonhick/workspace/projects/RK2/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-add_test([=[TextRestricterTest.LengthRestriction]=]  /home/vm/maxonhick/workspace/projects/RK2/build/text_restricter_tests [==[--gtest_filter=TextRestricterTest.LengthRestriction]==] --gtest_also_run_disabled_tests)
-set_tests_properties([=[TextRestricterTest.LengthRestriction]=]  PROPERTIES WORKING_DIRECTORY /home/vm/maxonhick/workspace/projects/RK2/build SKIP_REGULAR_EXPRESSION [==[\[  SKIPPED \]]==])
-set(  text_restricter_tests_TESTS TextRestricterTest.NoRestriction TextRestricterTest.CurseRestriction TextRestricterTest.LengthRestriction)
