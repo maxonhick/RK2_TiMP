@@ -42,3 +42,9 @@ set(CPACK_DEBIAN_PACKAGE_CONTROL_EXTRA "postinst;postrm")
 
 # Включаем CPack
 include(CPack)
+
+# Включаем флаги для coverage (gcov)
+if (CMAKE_CXX_COMPILER_ID STREQUAL "GNU" OR CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --coverage")
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} --coverage")
+endif()

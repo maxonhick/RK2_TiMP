@@ -34,12 +34,13 @@ jobs:
 
       - name: Run tests
         run: |
-          cd build
           ./text_restricter_tests
           ./text_restricter_static_tests
 
-      - name: lcov
-        run: lcov -c -d _build/CMakeFiles/banking.dir/banking/ --include *.cpp --output-file ./coverage/lcov.info
+      - name: Generate coverage
+        run: |
+          lcov -c -d . --include "*/strategies/*.h" --include "*/tests/*.cpp" --output-file coverage.info
+          lcov --remove coverage.info "*usr/include*" "*gtest*" --output-file coverage_filtered.info
 
       - name: Coveralls
         uses: coverallsapp/github-action@v2
