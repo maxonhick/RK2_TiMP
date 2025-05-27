@@ -26,19 +26,27 @@ target_link_libraries(text_restricter_tests GTest::GTest GTest::Main)
 gtest_discover_tests(text_restricter_static_tests)
 gtest_discover_tests(text_restricter_tests)
 
+# Включение CPack
+include(InstallRequiredSystemLibraries)
 
 # Настройка CPack
 set(CPACK_PACKAGE_NAME "textrestricter")
-set(CPACK_PACKAGE_VERSION "1.0.0")
+set(CPACK_PACKAGE_VERSION_MAJOR "1")
+set(CPACK_PACKAGE_VERSION_MINOR "0")
+set(CPACK_PACKAGE_VERSION_PATCH "0")
+set(CPACK_PACKAGE_VERSION "${CPACK_PACKAGE_VERSION_MAJOR}.${CPACK_PACKAGE_VERSION_MINOR}.${CPACK_PACKAGE_VERSION_PATCH}")
 set(CPACK_PACKAGE_DESCRIPTION "Text Restricter Application")
 set(CPACK_PACKAGE_CONTACT "Name email")
 set(CPACK_PACKAGE_VENDOR "Company")
 set(CPACK_PACKAGE_HOMEPAGE_URL "https://github.com/maxonhick")
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "email")
-set(CPACK_DEBIAN_PACKAGE_SECTION "utils")
-set(CPACK_DEBIAN_PACKAGE_DEPENDS "libgtest-dev, libc6, libstdc++6")
+set(CPACK_DEBIAN_PACKAGE_SECTION "devel")
+set(CPACK_DEBIAN_PACKAGE_DEPENDS "libc6 (>= 2.27)")
 set(CPACK_DEBIAN_PACKAGE_ARCHITECTURE "amd64")
 set(CPACK_DEBIAN_PACKAGE_CONTROL_EXTRA "postinst;postrm")
+
+install(TARGETS text_restricter_tests text_restricter_static_tests
+        DESTINATION bin)
 
 # Включаем CPack
 include(CPack)
