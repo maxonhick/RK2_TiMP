@@ -22,9 +22,6 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y cmake g++ libgtest-dev
 
-      - name: Install lcov
-        run: sudo apt-get install -y lcov 
-
       - name: Build project
         run: |
           mkdir build
@@ -37,15 +34,3 @@ jobs:
           cd build
           ./text_restricter_tests
           ./text_restricter_static_tests
-
-      - name: Generate coverage
-        run: |
-          cd build
-          lcov -c -d . --include "*/tests/*.cpp" --output-file coverage.info
-          lcov --remove coverage.info "*usr/include*" "*gtest*" --output-file coverage_filtered.info
-
-      - name: Coveralls
-        uses: coverallsapp/github-action@v2
-        with:
-            github-token: ${{ secrets.GITHUB_TOKEN }} 
-            path-to-lcov: ${{ github.workspace }}/coverage/lcov.info
